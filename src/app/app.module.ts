@@ -49,7 +49,7 @@ import { Calendar } from '@ionic-native/calendar';
     StatusBar,
     SplashScreen,
     DatePicker,
-    Calendar
+    Calendar,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
