@@ -1,0 +1,25 @@
+page-main {
+	
+	.toolbar-background-md{
+		background-color :#3f4851;
+	}
+	ion-title {
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  padding: 0 90px 1px;
+		  width: 100%;
+		  height: 100%;
+		  text-align: center;
+		}
+
+	ion-navbar >.bar-button-default-md{
+		color:#FFF!important;
+	}
+	ion-content > .scroll-content{
+		background-color:#f4f1ec;
+	}
+	ion-content > .fixed-content{
+		background-color:#f4f1ec;
+	}
+}	

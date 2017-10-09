@@ -1,0 +1,44 @@
+page-login {
+
+	background:url('../assets/picture/1-17.png');
+	background-size:cover;
+
+	.logo{
+		width:50%;
+		margin:0px auto;
+	}
+	.buttons{
+		width: 90%;
+
+		ion-col{
+			width:100%;
+
+				button{
+					width:100%;
+					border-radius: 5.5px;
+				}
+
+		}
+	}
+	ion-item{
+		background:transparent!important;
+	}
+
+	ion-item.item-md{
+		margin-left:0px;
+		padding-left:0px;
+	}
+
+	ion-input{
+		color:#FFF;
+	}
+		
+}
+ 
+page-login > ion-content.content.content-md{
+			background-color:#4E4E4E;;
+			opacity :0.8;
+			color:#FFF;
+		}
+
+

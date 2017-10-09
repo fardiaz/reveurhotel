@@ -1,0 +1,51 @@
+page-home {
+	background:url('../assets/picture/1-17.png');
+	background-size:cover;
+
+	.logo{
+		width:50%;
+		margin:0px auto;
+	}
+	.buttons{
+		position:absolute;
+		bottom:0px;
+		width: 90%;
+
+		ion-col{
+			width:100%;
+
+				button{
+					width:100%;
+					border-radius: 5.5px;
+				}
+
+		}
+	}
+
+	.signup{
+		border:1px solid #FFF;
+		border-radius: 5.5px;
+		background-color: transparent; 
+	}
+	.signup:hover{
+		background-color: #000!important;
+		opacity: 0.8; 
+	}
+	.login{
+		border:1px solid #FFF;
+		border-radius: 5.5px;
+		background-color: #000;
+		opacity: 0.8; 
+	}
+	.login:hover{
+		background-color: transparent!important; 
+	}
+
+		
+}
+ 
+page-home > ion-content.content.content-md{
+			background-color:#4E4E4E;;
+			opacity :0.8;
+			color:#FFF;
+		}
