@@ -22,4 +22,32 @@ page-main {
 	ion-content > .fixed-content{
 		background-color:#f4f1ec;
 	}
+
+	.tab_button{
+		border-radius:0px!important;
+		width:100%;
+		padding:0px!important;
+		margin:0px!important;
+		height:3rem;
+		background-color:#c1b49a;
+		border:none;
+		box-shadow:none;
+	}
+	.tab_button.button-md{
+		font-size:1rem;
+		color:#f4f1ec;
+
+	}
+	.tab_button.button-md:hover{
+		background-color:#c1b49a;
+		color:#f4f1ec;
+		border-bottom:2px solid #FFF;
+	}
+	.tab_button.active.button-md {
+		border-bottom:1px solid #FFF;
+	}
+	.flat{
+		padding:0px!important;
+		margin:0px!important;
+	}
 }	

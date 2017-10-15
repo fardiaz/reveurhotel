@@ -3,11 +3,19 @@
     <button ion-button menuToggle>
       <ion-icon name="menu" class="menu"></ion-icon>
     </button>
-    <ion-title><img src="../assets/logo/1-22.png" width="80" /></ion-title>
+    <ion-title><img src="assets/logo/1-22.png" width="80" /></ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
+  <ion-grid class="flat">
+    <ion-row>
+      <ion-col col-4 class="flat"><button ion-button class="tab_button active" [navPush]="signupPage">Sign up</button></ion-col>
+      <ion-col col-4 class="flat"> <button ion-button class="tab_button" [navPush]="loginPage">Log in</button></ion-col>
+      <ion-col col-4 class="flat"><button ion-button class="tab_button" [navPush]="loginPage">Log in</button></ion-col>
+    </ion-row>
+  </ion-grid>
+<div padding>
   <h3>Ionic Menu Starter</h3>
 
   <p>
@@ -19,11 +27,13 @@
 
 <ion-item>
     <ion-label stacked color="primary">Start</ion-label>
-    <ion-input [(ngModel)]="start_date" type="text" placeholder="Enter start date" readonly="readonly" (focus)="$event.stopPropagation(); showDateTimePicker($event)"></ion-input>
+    <ion-input [(ngModel)]="start_date" type="text" placeholder="Enter start date" readonly="readonly"  (focus)="$event.stopPropagation(); showDateTimePicker($event)"></ion-input>
 </ion-item>
 
-<ion-item>
-    <ion-label stacked color="primary">End</ion-label>
-    <ion-input [(ngModel)]="end_date" type="text" placeholder="Enter end date" readonly="readonly" (focus)="$event.stopPropagation(); openCalendar($event)"></ion-input>
-</ion-item>
+
+
+
+ <button ion-button secondary  (click) = "showDateTime()">Open Date Time Picker</button>
+</div>
+
 </ion-content>

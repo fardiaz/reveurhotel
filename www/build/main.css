@@ -25633,6 +25633,38 @@ page-main ion-content > .fixed-content {
   background-color: #f4f1ec;
 }
 
+page-main .tab_button {
+  border-radius: 0px !important;
+  width: 100%;
+  padding: 0px !important;
+  margin: 0px !important;
+  height: 3rem;
+  background-color: #c1b49a;
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+page-main .tab_button.button-md {
+  font-size: 1rem;
+  color: #f4f1ec;
+}
+
+page-main .tab_button.button-md:hover {
+  background-color: #c1b49a;
+  color: #f4f1ec;
+  border-bottom: 2px solid #FFF;
+}
+
+page-main .tab_button.active.button-md {
+  border-bottom: 1px solid #FFF;
+}
+
+page-main .flat {
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
 page-signup {
   background: url("../assets/picture/1-17.png");
   background-size: cover;
