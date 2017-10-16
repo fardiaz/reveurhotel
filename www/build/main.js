@@ -4,78 +4,6 @@ webpackJsonp([4],{
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MainPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_date_picker__ = __webpack_require__(154);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_calendar__ = __webpack_require__(156);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-/**
- * Generated class for the MainPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var MainPage = (function () {
-    function MainPage(navCtrl, navParams, calendar, datePicker) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.calendar = calendar;
-        this.datePicker = datePicker;
-        this.startDate = new Date();
-    }
-    MainPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad MainPage');
-    };
-    MainPage.prototype.showDateTimePicker = function (event) {
-        this.datePicker.show({
-            date: new Date(),
-            mode: 'date',
-            androidTheme: this.datePicker.ANDROID_THEMES.THEME_HOLO_DARK
-        }).then(function (date) { event.target.value = date; alert(date); }, function (err) { return console.log('Error occurred while getting date: ' + err); });
-    };
-    MainPage.prototype.openCalendar = function () {
-        alert("ASdsad");
-        this.calendar.createCalendar('MyCalendar').then(function (msg) { alert(msg); }, function (err) { console.log(err); });
-        this.calendar.openCalendar(this.startDate);
-    };
-    MainPage.prototype.showDateTime = function () {
-        alert("open date time picker");
-        this.datePicker.show({
-            date: new Date(),
-            mode: 'date',
-            androidTheme: this.datePicker.ANDROID_THEMES.THEME_HOLO_DARK
-        }).then(function (date) { alert(date); }, function (err) { return console.log('Error occurred while getting date: ' + err); });
-    };
-    return MainPage;
-}());
-MainPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-main',template:/*ion-inline-start:"/media/tunggul/Lenovo1/ionic/ionreddit/src/pages/main/main.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu" class="menu"></ion-icon>\n    </button>\n    <ion-title><img src="assets/logo/1-22.png" width="80" /></ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-grid class="flat">\n    <ion-row>\n      <ion-col col-4 class="flat"><button ion-button class="tab_button active" [navPush]="signupPage">Sign up</button></ion-col>\n      <ion-col col-4 class="flat"> <button ion-button class="tab_button" [navPush]="loginPage">Log in</button></ion-col>\n      <ion-col col-4 class="flat"><button ion-button class="tab_button" [navPush]="loginPage">Log in</button></ion-col>\n    </ion-row>\n  </ion-grid>\n<div padding>\n  <h3>Ionic Menu Starter</h3>\n\n  <p>\n    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.\n  </p>\n\n  <button ion-button secondary menuToggle>Toggle Menu</button>\n\n\n<ion-item>\n    <ion-label stacked color="primary">Start</ion-label>\n    <ion-input [(ngModel)]="start_date" type="text" placeholder="Enter start date" readonly="readonly"  (focus)="$event.stopPropagation(); showDateTimePicker($event)"></ion-input>\n</ion-item>\n\n\n\n\n <button ion-button secondary  (click) = "showDateTime()">Open Date Time Picker</button>\n</div>\n\n</ion-content>'/*ion-inline-end:"/media/tunggul/Lenovo1/ionic/ionreddit/src/pages/main/main.html"*/,
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_calendar__["a" /* Calendar */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_date_picker__["a" /* DatePicker */]])
-], MainPage);
-
-//# sourceMappingURL=main.js.map
-
-/***/ }),
-
-/***/ 102:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
@@ -114,6 +42,87 @@ LoginPage = __decorate([
 ], LoginPage);
 
 //# sourceMappingURL=login.js.map
+
+/***/ }),
+
+/***/ 102:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MainPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_date_picker__ = __webpack_require__(154);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_calendar__ = __webpack_require__(156);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_dateformat__ = __webpack_require__(252);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_dateformat___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_dateformat__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+/**
+ * Generated class for the MainPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var MainPage = (function () {
+    function MainPage(navCtrl, navParams, calendar, datePicker) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.calendar = calendar;
+        this.datePicker = datePicker;
+        this.startDate = new Date();
+    }
+    MainPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad MainPage');
+        var mydate = 'Wed Feb 01 2017 21:54:24 GMT-0200';
+        var date = new Date(mydate);
+        console.log(__WEBPACK_IMPORTED_MODULE_4_dateformat__(date, "longTime"));
+    };
+    MainPage.prototype.showDateTimePicker = function (event) {
+        this.datePicker.show({
+            date: new Date(),
+            mode: 'date',
+            androidTheme: this.datePicker.ANDROID_THEMES.THEME_HOLO_DARK
+        }).then(function (date) {
+            event.target.value = date;
+            alert(__WEBPACK_IMPORTED_MODULE_4_dateformat__(new Date(date), "longTime"));
+        }, function (err) { return console.log('Error occurred while getting date: ' + err); });
+    };
+    MainPage.prototype.openCalendar = function () {
+        alert("ASdsad");
+        this.calendar.createCalendar('MyCalendar').then(function (msg) { alert(msg); }, function (err) { console.log(err); });
+        this.calendar.openCalendar(this.startDate);
+    };
+    MainPage.prototype.showDateTime = function () {
+        alert("open date time picker");
+        this.datePicker.show({
+            date: new Date(),
+            mode: 'date',
+            androidTheme: this.datePicker.ANDROID_THEMES.THEME_HOLO_DARK
+        }).then(function (date) { alert(date); }, function (err) { return console.log('Error occurred while getting date: ' + err); });
+    };
+    return MainPage;
+}());
+MainPage = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        selector: 'page-main',template:/*ion-inline-start:"/media/tunggul/Lenovo1/ionic/ionreddit/src/pages/main/main.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu" class="menu"></ion-icon>\n    </button>\n    <ion-title><img src="assets/logo/1-22.png" width="80" /></ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-grid class="flat">\n    <ion-row>\n      <ion-col col-4 class="flat"><button ion-button class="tab_button active" [navPush]="signupPage">Sign up</button></ion-col>\n      <ion-col col-4 class="flat"> <button ion-button class="tab_button" [navPush]="loginPage">Log in</button></ion-col>\n      <ion-col col-4 class="flat"><button ion-button class="tab_button" [navPush]="loginPage">Log in</button></ion-col>\n    </ion-row>\n  </ion-grid>\n<div padding>\n  <h3>Ionic Menu Starter</h3>\n\n  <p>\n    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.\n  </p>\n\n  <button ion-button secondary menuToggle>Toggle Menu</button>\n\n\n<ion-item>\n    <ion-label stacked color="primary">Start</ion-label>\n    <ion-input [(ngModel)]="start_date" type="text" placeholder="Enter start date" readonly="readonly"  (focus)="$event.stopPropagation(); showDateTimePicker($event)"></ion-input>\n</ion-item>\n\n\n\n\n <button ion-button secondary  (click) = "showDateTime()">Open Date Time Picker</button>\n</div>\n\n</ion-content>'/*ion-inline-end:"/media/tunggul/Lenovo1/ionic/ionreddit/src/pages/main/main.html"*/,
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_calendar__["a" /* Calendar */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_date_picker__["a" /* DatePicker */]])
+], MainPage);
+
+//# sourceMappingURL=main.js.map
 
 /***/ }),
 
@@ -188,7 +197,7 @@ var map = {
 		3
 	],
 	"../pages/main/main.module": [
-		271,
+		273,
 		2
 	],
 	"../pages/menu/menu.module": [
@@ -196,7 +205,7 @@ var map = {
 		1
 	],
 	"../pages/signup/signup.module": [
-		273,
+		275,
 		0
 	]
 };
@@ -294,7 +303,7 @@ ContactPage = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__signup_signup__ = __webpack_require__(103);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__login_login__ = __webpack_require__(102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__login_login__ = __webpack_require__(101);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__menu_menu__ = __webpack_require__(51);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -352,14 +361,14 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(269);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(270);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_about_about__ = __webpack_require__(198);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_contact_contact__ = __webpack_require__(199);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_home_home__ = __webpack_require__(200);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_tabs_tabs__ = __webpack_require__(270);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_tabs_tabs__ = __webpack_require__(271);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_signup_signup__ = __webpack_require__(103);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_login_login__ = __webpack_require__(102);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_main_main__ = __webpack_require__(101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_login_login__ = __webpack_require__(101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_main_main__ = __webpack_require__(102);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_menu_menu__ = __webpack_require__(51);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ionic_native_status_bar__ = __webpack_require__(196);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__ionic_native_splash_screen__ = __webpack_require__(197);
@@ -409,10 +418,10 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["a" /* BrowserModule */],
             __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */], {}, {
                 links: [
-                    { loadChildren: '../pages/main/main.module#MainPageModule', name: 'MainPage', segment: 'main', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/menu/menu.module#MenuPageModule', name: 'MenuPage', segment: 'menu', priority: 'low', defaultHistory: [] }
+                    { loadChildren: '../pages/main/main.module#MainPageModule', name: 'MainPage', segment: 'main', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/menu/menu.module#MenuPageModule', name: 'MenuPage', segment: 'menu', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] }
                 ]
             })
         ],
@@ -442,7 +451,7 @@ AppModule = __decorate([
 
 /***/ }),
 
-/***/ 269:
+/***/ 270:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -491,7 +500,7 @@ MyApp = __decorate([
 
 /***/ }),
 
-/***/ 270:
+/***/ 271:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -538,7 +547,7 @@ TabsPage = __decorate([
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MenuPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__main_main__ = __webpack_require__(101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__main_main__ = __webpack_require__(102);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { DatePicker } from '@ionic-native/date-picker';
 import { Calendar } from '@ionic-native/calendar';
+import * as dateFormat  from 'dateformat';
 
 /**
  * Generated class for the MainPage page.
@@ -27,6 +28,11 @@ export class MainPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad MainPage');
+
+    var mydate = 'Wed Feb 01 2017 21:54:24 GMT-0200';
+    var date  = new Date(mydate);
+    console.log(dateFormat(date,"longTime"));
+    
   }
 
   showDateTimePicker(event){
@@ -36,7 +42,11 @@ export class MainPage {
         mode: 'date',
         androidTheme: this.datePicker.ANDROID_THEMES.THEME_HOLO_DARK
     }).then(
-        date => { event.target.value = date; alert(date); },
+        date => { 
+          event.target.value = date; 
+          alert(dateFormat(new Date(date),"longTime"));
+         
+         },
         err => console.log('Error occurred while getting date: ' + err)
     );
 
