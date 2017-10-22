@@ -7,9 +7,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 //import { HomePage } from '../pages/home/home';
 //import { LoginPage } from '../pages/login/login';
 import { MenuPage } from '../pages/menu/menu';
+import { ReveurService } from './services/ReveurService';
 
 @Component({
-  templateUrl: 'app.html'
+  templateUrl: 'app.html',
+  providers:[ReveurService]
 })
 export class MyApp {
   rootPage:any = MenuPage;

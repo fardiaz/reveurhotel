@@ -15,25 +15,29 @@
       <ion-col col-4 class="flat"><button ion-button class="tab_button" [navPush]="loginPage">Log in</button></ion-col>
     </ion-row>
   </ion-grid>
-<div padding>
-  <h3>Ionic Menu Starter</h3>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
-
-
+ <ion-list>
+    <ion-item>
+      <ion-label>Hotel</ion-label>
+      <ion-select [(ngModel)]="motelId">
+        <ion-option value="2294">Bali Paragon Resort Hotel and Villas</ion-option>
+        <ion-option value="1895">Java Paragon Hotel And Residence</ion-option>
+        <ion-option value="5814">Verwood Hotel & Service Residence</ion-option>
+      </ion-select>
+</ion-item>
 <ion-item>
-    <ion-label stacked color="primary">Start</ion-label>
-    <ion-input [(ngModel)]="start_date" type="text" placeholder="Enter start date" readonly="readonly"  (focus)="$event.stopPropagation(); showDateTimePicker($event)"></ion-input>
+      <ion-label>Date Checkin</ion-label>
+      <ion-datetime displayFormat="YYYY-MM-DD" pickerFormat="YYYY-MMM-DD" [(ngModel)]="dateCheckin"></ion-datetime>
+</ion-item>
+<ion-item>
+      <ion-label>Date Checkout</ion-label>
+      <ion-datetime displayFormat="YYYY-MM-DD" pickerFormat="YYYY-MMM-DD" [(ngModel)]="dateCheckout"></ion-datetime>
+</ion-item>
+<ion-item>
+     <button ion-button secondary  (click) = "checkAvailability()">Check Availability</button>
 </ion-item>
 
+</ion-list>
 
-
-
- <button ion-button secondary  (click) = "showDateTime()">Open Date Time Picker</button>
-</div>
 
 </ion-content>
